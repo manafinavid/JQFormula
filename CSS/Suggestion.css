@@ -1,0 +1,35 @@
+:root {
+  --menu-background-hover: blue;
+  --menu-color-hover: white;
+  --menu-background-color: gray;
+  --menu-text-color: darkred;
+}
+
+.suggestion {
+  background: var(--menu-background-color);
+  min-width: 4rem;
+}
+.suggestion ul {
+  margin: 0;
+  padding: 0;
+  width: auto;
+  list-style: none;
+}
+.suggestion ul li {
+  margin: 0.25rem 0.1rem;
+  display: flex;
+  justify-content: space-between;
+}
+.suggestion ul li.hover {
+  background-color: var(--menu-background-hover);
+}
+.suggestion ul li.hover .text-container {
+  color: var(--menu-color-hover) !important;
+}
+.suggestion ul li .text-container {
+  color: var(--menu-color-hover) !important;
+  padding: 0.25rem 1rem;
+}
+.suggestion ul li .text-container .select-text {
+  color: var(--menu-text-color);
+}/*# sourceMappingURL=Suggestion.css.map */

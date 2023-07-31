@@ -1,0 +1,43 @@
+:root {
+    --menu-background-hover: blue;
+    --menu-color-hover: white;
+
+    --menu-background-color: gray;
+    --menu-text-color: darkred;
+}
+
+
+.suggestion {
+    background: var(--menu-background-color);
+    min-width: 4rem;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        width: auto;
+        list-style: none;
+
+        li {
+            margin: 0.25rem .1rem;
+            display: flex;
+            justify-content: space-between;
+
+            &.hover {
+                background-color: var(--menu-background-hover);
+
+                .text-container {
+                    color: var(--menu-color-hover) !important;
+                }
+            }
+            
+            .text-container {
+                color: var(--menu-color-hover) !important;
+                padding: .25rem 1rem;
+                
+                .select-text {
+                    color: var(--menu-text-color);
+                }
+            }
+        }
+    }
+}

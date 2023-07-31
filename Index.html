@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<link href="CSS/Suggestion.css" rel="stylesheet">
+
+<body>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+        }
+
+        .suggestionable {
+            width: 50Vw;
+            height: 2ch;
+            margin: auto;
+            border: 1px solid black;
+            position: relative;
+        }
+
+        .RedSpace {
+            background-color: red;
+        }
+
+        .BlueSpace {
+            background-color: blue;
+        }
+    </style>
+    <!-- 
+    <div contenteditable="true" class="suggestionable">
+        <span contenteditable="false">
+            <span contenteditable="true" class="content-span caret RedSpace">1234</span>
+        </span>
+        <span contenteditable="false">
+            <span contenteditable="true" class="content-span caret BlueSpace">45678</span>
+        </span>
+        <span contenteditable="false">
+            <span contenteditable="true" class="content-span caret RedSpace">90</span>
+        </span>
+        <span contenteditable="false">
+            <span contenteditable="true" class="content-span caret RedSpace">ABC</span>
+        </span>
+    </div>
+    Fix Caret at span now update -->
+
+    <textarea class="suggestionable caret"></textarea>
+
+</body>
+<script src="Lib/jquery/dist/jquery.min.js"></script>
+<script src="JS/Caret.js"></script>
+<script src="JS/Suggestion.js"></script>
+<script src="JS/Caret.js"></script>
+
+<script>
+    BindSuggestionMenu($(".suggestionable"))
+    AddItems([{
+        Lable:"IIF",
+        Value: "IFF($inp1,$inp2,$inp3)",
+        Display: "اگر",
+    },
+    {
+        Lable: "Person",
+        Display: "شخص",
+        Childs: [{
+            Lable: "Name",
+            Display: "نام",
+        }, {
+            Lable: "Lastname",
+            Display: "نام خانوادگی",
+        }, {
+            Lable: "Age",
+            Display: "سن",
+        }]
+    },
+    {
+        Lable: "Tax",
+        Display: "مالیات",
+        Childs: [{
+            Lable: "For",
+            Display: "پرداخت کننده",
+        }, {
+            Lable: "Amount",
+            Display: "مقدار",
+        }, {
+            Lable: "IsPaied",
+            Display: "آیا پرداخت شده؟",
+        },]
+    },
+    {
+        Lable: "Company",
+        Display: "شرکت",
+        Childs: [{
+            Lable: "Name",
+            Value: "CompanyName",
+            Display: "نام",
+        }, {
+            Lable: "Boss",
+            Display: "ریاست",
+        }, {
+            Lable: "IsActive",
+        },]
+    },
+    {
+        Lable: "Animal",
+        Display: "حیوان",
+        Childs: [{
+            Lable: "Lion",
+            Display: "شیر",
+        }, {
+            Lable: "Donkey",
+            Display: "حمل کننده",
+        }, {
+            Lable: "Fish",
+        },]
+    },
+    ])
+
+</script>
+
+</html>
